@@ -1,45 +1,287 @@
 body {
+  /* background-image: url("../public/fertile area in anime style_.jpeg");
+  background-size: cover;
+  background-position: center; */
   font-family: Arial, sans-serif;
   background-color: rgb(193, 218, 255);
- 
+  margin: auto;
 }
+
 .appinner {
-  color: rgb(109, 163, 243);
+    /* background-image: url("../public/download.jpeg");
+  background-size: cover;
+  background-position: center; */
+  font-size: 25px;
+  color: rgb(59, 105, 173);
   
 }
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(137, 182, 250);
-  padding: 10px;
+  background-color: rgb(150, 185, 237);
   color: rgb(13, 12, 12);
+  justify-content: center;
 }
 
-.navbar ul  {
+.navbar ul {
   display: flex;
   list-style: none;
-  gap: 45px;
+  gap: 15px;
 }
-.navbar li  {
- 
+
+.navbar li {
   background: rgb(242, 245, 247);
-  padding: 8px 22px ;
+  padding: 8px 22px;
   border: 1px;
   border-radius: 25px;
+  /* border: solid red; */
 }
-.card {
-  background: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
+.card1 {
+  background-image: url("../public/Blue Sky Computer Background.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 0.2px;
+  border-radius: 15px;
+}
+.card1h3 {
+ text-align: center;
+  font-size: 30px;
+  color: rgb(39, 90, 156);
+  /* padding: 15px; */
+background-color: #f5eed4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: solid rgb(229, 227, 201);
+}
+
+.card1 .overlay {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.83); 
+margin: 20px auto auto;
+  align-items: center;
+  width: 30%;
+  height: 80px;
+  font-size: 24px;
+  border-radius: 50px;
+  color: rgb(59, 105, 173);
+}
+.new-quote-button {
+  display: flex;
+  justify-content: right;
+  gap: 80px ;
+  padding-right: 90px;
+  /* margin-top: 150px; */
+  height: 60%;
+  align-items:end ;
+  
+}
+.card1 .new-quote-button button {
+  /* display: flex; */
+  /* margin: 250px auto auto; */
+  justify-content: center;
+  margin-bottom: 30px;
+  height: 40px;
+  background-color: #93b1ea;
+  color: white;
+  font-size: 15px;
+}
+.card2 {
+  background-image: url("../public/Blue Sky Computer Background.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 0.2px;
+  border-radius: 15px;
+}
+.card2h3 {
+ text-align: center;
+  font-size: 30px;
+  color: rgb(39, 90, 156);
+  /* padding: 15px; */
+background-color: #f5eed4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: solid rgb(229, 227, 201);
+}
+
+
+/* .quote-image {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
+  /* height: 40%;
+border: solid red; */
+/* } */ */
+.card4 {
+  background-image: url("../public/Rainy\ Banner\ Gif.gif");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 0.2px;
+  border-radius: 15px;
+}
+.card4h3 {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(39, 90, 156);
+  /* padding: 15px; */
+background-color: #f5eed4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: solid rgb(229, 227, 201);
+}
+.moods {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  /* margin-left: 340px; */
+}
+.happy-button {
+  background-color: #f9d71c;
+  color: white;
+  font-size: 15px;
+}
+.sad-button {
+  background-color: #1c6ef9;
+  color: white;
+  font-size: 15px;
+}
+.calm-button {
+  background-color: #92ceed;
+  color: white;
+  font-size: 15px;
+}
+.anxious-button {
+  background-color: #f9a825;
+  color: white;
+  font-size: 15px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 8px 42px;
   margin: 5px;
   border: none;
-  border-radius: 5px;
-  background-color: #4caf9d;
-  color: white;
+  border-radius: 15px;
+  background-color: #e0e5ea;
+  color: rgb(15, 15, 15);
   cursor: pointer;
+}
+
+.clear-btn {
+  margin-top: 15px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  background-color: #624da0;
+}
+
+
+/* Buttons */
+.buttons button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Chart area */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  background: white;
+}
+
+/* Each day */
+.bar-container {
+  flex: 1;
+  text-align: center;
+}
+
+.bar-container {
+  flex: 1;
+  height: 100%; /* ⭐ IMPORTANT */
+  display: flex; /* ⭐ IMPORTANT */
+  flex-direction: column;
+  justify-content: flex-end; /* bars go up from bottom */
+  align-items: center;
+}
+
+/* Bars (area look) */
+.bar {
+  width: 80%;
+  margin: auto;
+  border-radius: 8px 8px 0 0;
+  transition: height 0.5s;
+}
+
+/* Mood colors */
+.bar.sad {
+  background: #5dade2;
+}
+
+.bar.calm {
+  background: #58d68d;
+}
+
+.bar.happy {
+  background: #f4d03f;
+}
+
+.bar.anxious {
+  background: #ec7063;
+}
+
+.bar-container span {
+  font-size: 12px;
+}
+.breathing-instruction {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.breathing-instruction p {
+  font-size: 35px;
+  margin-left: 200px;
+  font-weight: bold;
+  color: #4f2ec8;
+}
+.breathing-instruction img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.exercisebutton {
+  margin-bottom: 30px;
+  margin-left: 200px;
+  background-color: #4f2ec8;
+  color: white;
+  font-size: 15px;
+}
+.music-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.music-container audio {
+  width: 80%;
+  outline: none;
 }

@@ -11,12 +11,20 @@ function Motivation() {
   const [quote, setQuote] = useState(quotes[0]);
 
   return (
-    <div className="card">
-      <h3>Daily Motivation</h3>
-      <p>{quote}</p>
-      <button onClick={() => setQuote(quotes[Math.floor(Math.random() * quotes.length)])}>
+    <div className="card1">
+      <div className="card1h3"><h3>Daily Motivation</h3></div>
+      <div className="overlay"><p >{quote}</p>
+      
+      </div>
+      
+      <div className="new-quote-button">
+        
+        <button onClick={() => setQuote(quotes[Math.floor(Math.random() * quotes.length)])}>
         New Quote
       </button>
+      {/* <div className="quote-image"> */}
+       <img src="/yoga.gif" alt="Yoga Motivation" /> </div>
+       {/* </div> */}
     </div>
   );
 }

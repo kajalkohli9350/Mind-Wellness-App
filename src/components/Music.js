@@ -2,11 +2,11 @@ import React from "react";
 
 function Music() {
   return (
-    <div className="card">
-      <h3>Relaxing Music</h3>
-      <audio controls>
-        <source src="music.mp3" type="audio/mp3" />
-      </audio>
+    <div className="card4">
+      <div className="card4h3"><h3>Relaxing Music</h3></div>
+      <div className="music-container">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    </div>
     </div>
   );
 }
