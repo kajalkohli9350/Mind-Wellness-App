@@ -5,6 +5,7 @@ import MoodTracker from "./components/MoodTracker";
 import Breathing from "./components/Breathing";
 import Music from "./components/Music";
 import "./App.css";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <div id="music">
         <Music />
       </div>
+      <Footer />
     </div>
   );
 }
