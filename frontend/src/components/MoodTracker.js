@@ -60,7 +60,7 @@ function MoodTracker() {
         </div>
         <div className="history">
           <div className="historyhead">
-            <h4>Mood History</h4>
+            <h3>Mood History</h3>
           </div>
           <div className="historyvalue">
           {history.map((item, index) => (

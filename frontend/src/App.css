@@ -72,7 +72,7 @@ body {
   justify-content: center;
   margin-bottom: 30px;
   height: 40px;
-  background-color: #93b1ea;
+  background-color: #3574e9;
   color: white;
   font-size: 15px;
 }
@@ -96,25 +96,7 @@ body {
   border: solid rgb(229, 227, 201);
 }
 
-.card4 {
-  background-image: url("../public/Blue Sky Computer Background.jpeg");
-  background-size: cover;
-  background-position: center;
-  height: 550px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 20px;
-  padding: 0.2px;
-  border-radius: 15px;
-}
-.card4h3 {
-  text-align: center;
-  font-size: 30px;
-  color: rgb(39, 90, 156);
-  background-color: #f5eed4;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: solid rgb(229, 227, 201);
-}
+
 .moods {
   font-size: 20px;
   display: flex;
@@ -234,16 +216,52 @@ button {
   margin: 20px;
   border-radius: 50%;
 }
+.breathing-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin:50px auto;
+  border: solid rgba(126, 200, 227, 0);
+}
+
+.bg-circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url("../public/breathingimg.avif");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(126,200,227,0.6);
+  border-radius: 50%;
+  transition: transform 4s ease-in-out;
+}
+
+
+.grow {
+  transform: scale(1.5);
+}
+
+.shrink {
+  transform: scale(1);
+}
 
 .exercisebutton {
   display: flex;
   justify-content: center;
+  
 }
 .exercisebutton button {
-  margin-bottom: 30px;
   background-color: #8164eb;
   color: rgb(236, 243, 237);
   font-size: 15px;
+  margin-top: 50px;
+
 }
 
 .exercisebutton button:hover {
@@ -252,16 +270,57 @@ button {
 .exercisebutton button:active {
   background-color: #4b2e7a;
 }
+.timer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 45px;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+}
+.step-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 210px;
+  
+}
+ .card4 {
+  background-image: url("../public/Blue Sky Computer Background.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 0.2px;
+  border-radius: 15px;
+  
+}
+.card4h3 {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  text-align: center;
+  /* height: 20%; */
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(39, 90, 156);
+  background-color: #f5eed4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: solid rgb(229, 227, 201);
+  
+}
 .card4 .player {
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.605);
   padding: 20px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   width: 250px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .controls {
@@ -279,34 +338,14 @@ button {
   margin: 5px;
   padding: 8px 12px;
   cursor: pointer;
-}
-.breathing-container {
-  text-align: center;
-  margin: 20px;
-}
-
-.circle {
-  width: 120px;
-  height: 120px;
-  background: #7ec8e3;
-  border-radius: 50%;
-  margin: 20px auto;
-  transition: transform 4s ease-in-out;
-}
-
-.grow {
-  transform: scale(1.5);
-}
-
-.shrink {
-  transform: scale(1);
+  
 }
 
 .history {
   background-color: rgba(255, 255, 255, 0.605);
   padding: 20px;
   border-radius: 15px;
-  width: 250px;
+  width: 450px;
   margin: auto;
   height: 200px;
   display: flex;
@@ -317,9 +356,11 @@ button {
 /* Heading fixed */
 .historyhead {
   text-align: center;
-  color: rgb(82, 129, 200);
-  flex-shrink: 0;
+  color: rgb(81, 121, 180);
+  font-size: 20px;
+
 }
+
 
 /* Scroll sirf yaha hoga */
 .historyvalue {
@@ -336,10 +377,13 @@ button {
   border-radius: 4px;
 }
 .historyItem {
+  display: flex;
+  padding: 12px;
+  justify-content:space-around;
   background: rgba(255, 255, 255, 0.5);
-  padding: 6px;
   border-radius: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
+
 }
 
 .moodText {
