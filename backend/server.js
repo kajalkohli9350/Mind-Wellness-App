@@ -14,12 +14,18 @@ const app = express();
 
 
 // middleware
+app.use(express.json());
+
 app.use(
   cors({
-    origin: "*",
-    methods: ["GET", "POST"],
+    origin: [
+      "http://localhost:3000",
+      "https://mind-wellness-app-z9yo.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
-); // allow cross origin requests
+);// allow cross origin requests
 app.use(express.json()); // allow JSON data in requests
 
 
