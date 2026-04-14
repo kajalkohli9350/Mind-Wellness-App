@@ -1,3 +1,5 @@
+// load environment variables from .env file
+require("dotenv").config();
 // importing express framework
 const express = require("express");
 

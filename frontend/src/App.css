@@ -438,3 +438,12 @@ button {
   font-size: 14px;
   opacity: 0.7;
 }
+.footer a{
+  color: #4da6ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
