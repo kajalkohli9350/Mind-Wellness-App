@@ -14,7 +14,12 @@ const app = express();
 
 
 // middleware
-app.use(cors()); // allow cross origin requests
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST"],
+  })
+); // allow cross origin requests
 app.use(express.json()); // allow JSON data in requests
 
 
@@ -33,6 +38,5 @@ app.get("/", (req, res) => {
 });
 
 // start server
-app.listen(5000, ()=>{
-    console.log("Server running on port 5000");
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("Server running"));
