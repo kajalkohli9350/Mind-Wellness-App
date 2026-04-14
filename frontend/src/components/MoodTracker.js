@@ -11,25 +11,30 @@ function MoodTracker() {
 
   // fetch moods from backend
   const fetchMoods = () => {
-    const res = axios.get("http://localhost:5000/api/moods/all");
+    const res = axios.get(
+      "https://mind-wellness-app.onrender.com/api/moods/all",
+    );
     res.then((response) => {
       setHistory(response.data);
-      
     });
   };
 
   // save mood to database
   const saveMood = (mood) => {
-    axios.post("http://localhost:5000/api/moods/add", { mood }).then(() => {
-      fetchMoods(); // refresh history
-    });
+    axios
+      .post("https://mind-wellness-app.onrender.com/api/moods/add", { mood })
+      .then(() => {
+        fetchMoods(); // refresh history
+      });
   };
 
   // clear database
   const clearHistory = () => {
-    axios.delete("http://localhost:5000/api/moods/clear").then(() => {
-      fetchMoods();
-    });
+    axios
+      .delete("https://mind-wellness-app.onrender.com/api/moods/clear")
+      .then(() => {
+        fetchMoods();
+      });
   };
   return (
     <>
@@ -63,17 +68,18 @@ function MoodTracker() {
             <h3>Mood History</h3>
           </div>
           <div className="historyvalue">
-          {history.map((item, index) => (
-           <div key={index} className="historyItem">
-        <p className="moodText">{item.mood}</p>
-        <span className="timeText">{item.time}</span>
-      </div>
-          ))}</div>
+            {history.map((item, index) => (
+              <div key={index} className="historyItem">
+                <p className="moodText">{item.mood}</p>
+                <span className="timeText">{item.time}</span>
+              </div>
+            ))}
+          </div>
         </div>
-<div className="clear-btn-container">
-        <button className="clear-btn" onClick={clearHistory}>
-          Clear Mood History
-        </button>
+        <div className="clear-btn-container">
+          <button className="clear-btn" onClick={clearHistory}>
+            Clear Mood History
+          </button>
         </div>
       </div>
     </>
