@@ -25,11 +25,15 @@ function Music() {
     setPlaying(false);
   };
 
-  const nextSong = () => {
-    const nextIndex = (currentSongIndex + 1) % songs.length;
-    setCurrentSongIndex(nextIndex);
-    setPlaying(false);
-  };
+ const nextSong = () => {
+  const nextIndex = (currentSongIndex + 1) % songs.length;
+  setCurrentSongIndex(nextIndex);
+  setPlaying(true);
+
+  setTimeout(() => {
+    audioRef.current.play();
+  }, 100);
+};
 
   return (
     <div className="card4">
@@ -41,10 +45,12 @@ function Music() {
       </div>
 
       <div className="controls">
-        <button onClick={playMusic}>⏸</button>
-        <button onClick={pauseMusic}>▶</button>
-        <button onClick={nextSong}>⏭</button>
-      </div>
+  <button onClick={playing ? pauseMusic : playMusic}>
+    {playing ? "⏸ Pause" : "▶ Play"}
+  </button>
+
+  <button onClick={nextSong}>⏭ Next</button>
+</div>
     </div>
   );
 }

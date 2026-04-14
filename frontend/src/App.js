@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Motivation from "./components/Motivation";
 import MoodTracker from "./components/MoodTracker";
