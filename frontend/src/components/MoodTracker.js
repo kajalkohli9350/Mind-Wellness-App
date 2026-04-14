@@ -12,7 +12,7 @@ function MoodTracker() {
   // fetch moods from backend
   const fetchMoods = () => {
     const res = axios.get(
-      "https://mind-wellness-app.onrender.com/api/moods",
+      "https://mind-wellness-app.onrender.com/api/moods/all",
     );
     res.then((response) => {
       setHistory(response.data);
