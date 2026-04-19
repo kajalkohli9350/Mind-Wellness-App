@@ -1,14 +1,15 @@
 import React, { useState, useRef } from "react";
 
-function Music() {
-  // playlist
-  const songs = [
-    { title: "Peaceful Mind", file: "/music/music1.mp3" },
-    { title: "Deep Relaxation", file: "/music/music2.mp3" },
-    { title: "Calm Ocean", file: "/music/music3.mp3" },
-    { title: "Gentle Rain", file: "/music/music4.mp3" },
-    { title: "Soothing Piano", file: "/music/music5.mp3" },
-  ];
+function Music({ selectedMood }) { 
+   
+   //  playlist
+    const songs = [
+      { title: "Peaceful Mind", file: "/music/music1.mp3" },
+      { title: "Deep Relaxation", file: "/music/music2.mp3" },
+      { title: "Calm Ocean", file: "/music/music3.mp3" },
+      { title: "Gentle Rain", file: "/music/music4.mp3" },
+      { title: "Soothing Piano", file: "/music/music5.mp3" },
+    ];
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -25,17 +26,16 @@ function Music() {
     setPlaying(false);
   };
 
- const nextSong = () => {
-  const nextIndex = (currentSongIndex + 1) % songs.length;
-  setCurrentSongIndex(nextIndex);
-  setPlaying(true);
+  const nextSong = () => {
+    const nextIndex = (currentSongIndex + 1) % songs.length;
+    setCurrentSongIndex(nextIndex);
+    setPlaying(true);
 
-  setTimeout(() => {
-    audioRef.current.play();
-  }, 100);
-};
-
-  return (
+    setTimeout(() => {
+      audioRef.current.play();
+    }, 100);
+  };
+return (
     <div className="card4">
       <div className="card4h3">Relaxing Music</div>
 <div className="player">
@@ -54,5 +54,4 @@ function Music() {
     </div>
   );
 }
-
 export default Music;

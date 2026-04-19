@@ -11,7 +11,7 @@ app.post("/add", (req, res) => {
     mood: req.body.mood,
     time: new Date().toLocaleString(),
   });
- 
+
   newMood.save();
   res.json({ message: "Mood saved" });
 });
@@ -37,5 +37,6 @@ app.delete("/clear", (req, res) => {
       res.status(500).json({ error: err.message });
     });
 });
+
 
 module.exports = app;

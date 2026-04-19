@@ -8,6 +8,7 @@ import "./App.css";
 import Footer from "./components/footer";
 
 function App() {
+
   return (
     <div className="app">
       <div className="appinner">
@@ -21,8 +22,8 @@ function App() {
       </div>
 
       <div id="mood">
-        <MoodTracker
-         />
+        <MoodTracker  />
+       
       </div>
 
       <div id="breathing">
