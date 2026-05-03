@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function MoodTracker( ) {
+function MoodTracker({ setSelectedMood }) {
   const [history, setHistory] = useState([]);
 
   // fetch moods from backend when page loads
@@ -11,7 +11,9 @@ function MoodTracker( ) {
 
   // fetch moods from backend
   const fetchMoods = () => {
-    const res = axios.get("https://mind-wellness-app.onrender.com/api/moods/all");
+    const res = axios.get(
+      "https://mind-wellness-app.onrender.com/api/moods/all",
+    );
     res.then((response) => {
       setHistory(response.data);
     });
@@ -22,6 +24,7 @@ function MoodTracker( ) {
       .post("https://mind-wellness-app.onrender.com/api/moods/add", { mood })
       .then(() => {
         fetchMoods(); // refresh history
+        setSelectedMood(mood); // update selected mood
       });
   };
   // clear database
